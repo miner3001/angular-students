@@ -8,5 +8,5 @@ import { Student } from './student/student';
   styleUrl: './app.css'
 })
 export class App {
-  author ='Geraci Bruno Salvatore';
+  author ='Mihnea Poputoaia';
 }

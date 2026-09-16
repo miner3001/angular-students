@@ -11,7 +11,7 @@ export class Student {
     {name: "Pippo ",city:"topolinia",gender:"m",present:"true"},
     {name: "Minnie ",city:"topolinia",gender:"f",present:"false"},
     {name: "Rozzani ",city:"paperopoli",gender:"m",present:"true"},
-    {name: "Pippo ",city:"paperopoli",gender:"f",present:"true"},
+    {name: "Pippo Cattivo ",city:"paperopoli",gender:"f",present:"true"},
     {name: "Peano",city:"topolinia",gender:"m",present:"true"}
 
   ]
