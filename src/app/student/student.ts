@@ -1,21 +1,28 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgStyle } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-student',
   imports: [CommonModule],
-  templateUrl: './student.html',
+  selector: 'app-student',
   styleUrl: './student.css',
+  templateUrl: './student.html',
 })
 export class Student {
-  MALE_COLOR ="lightblue";
-  FEMALE_COLOR="pink";
-  students: any[]=[
-    {name: "Pippo ",city:"topolinia",gender:"m",present:true},
-    {name: "Minnie ",city:"topolinia",gender:"f",present:false},
-    {name: "Rozzani ",city:"paperopoli",gender:"m",present:true},
-    {name: "Pippo Cattivo ",city:"paperopoli",gender:"f",present:true},
-    {name: "Peano",city:"topolinia",gender:"m",present:true}
 
-  ]
+  M_COLOR = "lightblue";
+  F_COLOR = "pink";
+
+  students: any[] = [{ "name": "Bumbuz", "city": "Saluzzo", "gender": "M", "present": true },
+  { "name": "Tesio", "city": "Bagge", "gender": "M", "present": false },
+  { "name": "Mossello", "city": "Monasterolo di Savigliano", "gender": "M", "present": true },
+  { "name": "Parola", "city": "Centallo", "gender": "F", "present": true }
+  ];
+
+  getStyle(s:any) {
+    return {
+      'backgroundColor': s.gender == 'F' ? this.F_COLOR : this.M_COLOR,
+      'textdecoration': s.present ? 'none' : 'underline',
+      'font-weight' : s.present ? 'norlma' : 'bold'
+    }
+  }
 }
