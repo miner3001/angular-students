@@ -2,6 +2,11 @@
     <p
      [ngStyle]="{'backgroundColor': item.gender == 'f' ? FEMALE_COLOR : MALE_COLOR}"
      [ngClass]="{'absent': !item.present}">
-     {{$index+1}}. {{item.name}} {{item.city}}
+     {{$index+1}}. {{item.name}} {{item.city}} E' 
+     @if (item.present){
+        <span>Presente</span>
+     }@else{
+        <span>Assente</span>
+     }
     </p>
 }
